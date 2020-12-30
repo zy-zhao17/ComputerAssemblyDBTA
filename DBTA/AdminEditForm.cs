@@ -22,10 +22,12 @@ namespace DBTA
         string[] names;
         string[] keys;
         string[] contents;
+        bool isupdate;
 
-        public AdminEditForm(int num, string tablename, string[] names,string[] keys,string[] contents,int priornum)
+        public AdminEditForm(bool isupdate,int num, string tablename, string[] names,string[] keys,string[] contents,int priornum)
         {
             InitializeComponent();
+            this.isupdate = isupdate;
             this.num = num;
             this.tablename = tablename;
             this.names = names;
@@ -58,11 +60,15 @@ namespace DBTA
             boxes[9] = textBox10;
             boxes[10] = textBox11;
             boxes[11] = textBox12;
-            for(int i = 0; i < priornum; i++)
+            if (isupdate)
             {
-                labels[i].Enabled = false;
-                boxes[i].Enabled = false;
+                for (int i = 0; i < priornum; i++)
+                {
+                    labels[i].Enabled = false;
+                    boxes[i].Enabled = false;
+                }
             }
+
 
             for (int i = 0; i < num; i++)
             {
@@ -81,29 +87,38 @@ namespace DBTA
         //提交
         private void button1_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < num; i++)
+            if (isupdate)
             {
-                if (boxes[i].Text == "")
+                for (int i = 0; i < num; i++)
                 {
-                    MessageBox.Show($"请填写{names[i]}！");
-                    return;
+                    if (boxes[i].Text == "")
+                    {
+                        MessageBox.Show($"请填写{names[i]}！");
+                        return;
+                    }
                 }
-            }
 
-            if (priornum == 1)
-            {
-                for(int i = 1; i < num; i++)
+                if (priornum == 1)
                 {
-                    Connection.query($"UPDATE {tablename} SET {keys[i]} = '{boxes[i].Text}' WHERE {keys[0]} = '{boxes[0].Text}'");
+                    for (int i = 1; i < num; i++)
+                    {
+                        Connection.query($"UPDATE {tablename} SET {keys[i]} = '{boxes[i].Text}' WHERE {keys[0]} = '{boxes[0].Text}'");
+                    }
+                }
+                else
+                {
+                    for (int i = 2; i < num; i++)
+                    {
+                        Connection.query($"UPDATE {tablename} SET {keys[i]} = '{boxes[i].Text}' WHERE {keys[0]} = '{boxes[0].Text}' AND  WHERE {keys[1]} = '{boxes[1].Text}'");
+                    }
                 }
             }
             else
             {
-                for (int i = 2; i < num; i++)
-                {
-                    Connection.query($"UPDATE {tablename} SET {keys[i]} = '{boxes[i].Text}' WHERE {keys[0]} = '{boxes[0].Text}' AND  WHERE {keys[1]} = '{boxes[1].Text}'");
-                }
+
+                //"insert into CPU_PC (CPUNO, CPUNAME,BRAND,SLOT,CPUCORE,INTEGRAPH,PRICE) values('CPU00010', '酷睿i9 10900K', 'Intel', 'LGA 1200', 10, 'Y', 4099); ";
             }
+
 
 
             Close();
