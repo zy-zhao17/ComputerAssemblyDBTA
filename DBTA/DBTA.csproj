@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEditForm.Designer.cs">
+      <DependentUpon>AdminEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
