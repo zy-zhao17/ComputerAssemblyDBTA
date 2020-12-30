@@ -82,7 +82,7 @@ namespace DBTA
             BOARDSELECT.ShowDialog();
             if (BOARDSELECT.BOARDselect == true)
             {
-                textBox5.Text = BOARDSELECT.BOARDname;
+                textBox2.Text = BOARDSELECT.BOARDname;
             }
         }
 

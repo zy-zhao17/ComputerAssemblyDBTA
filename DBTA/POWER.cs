@@ -30,7 +30,7 @@ namespace DBTA
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from POWER");
+            List<string> ab = Connection.query($"select * from POWER_PC");
             int nrows = ab.Count / 5;
             for (int i = 0; i < nrows; i++)
             {
@@ -48,7 +48,7 @@ namespace DBTA
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from POWER WHERE POWERTYPE= '{textBox1.Text}'");
+            List<string> ab = Connection.query($"select * from POWER_PC WHERE POWERTYPE= '{textBox1.Text}'");
             int nrows = ab.Count / 5;
             for (int i = 0; i < nrows; i++)
             {
