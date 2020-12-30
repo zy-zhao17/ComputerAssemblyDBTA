@@ -137,6 +137,9 @@
       <DependentUpon>setupform.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Connection.cs" />
+    <EmbeddedResource Include="AdminEditForm.resx">
+      <DependentUpon>AdminEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
