@@ -79,7 +79,6 @@
     <Compile Include="CPU.Designer.cs">
       <DependentUpon>CPU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dao.cs" />
     <Compile Include="DISK.cs">
       <SubType>Form</SubType>
     </Compile>
