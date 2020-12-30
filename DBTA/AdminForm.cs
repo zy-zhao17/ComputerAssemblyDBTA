@@ -15,6 +15,16 @@ namespace DBTA
         public AdminForm()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add(new DataColumn("sdf"));
+
+
         }
     }
 }
