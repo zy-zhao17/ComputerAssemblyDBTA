@@ -9,23 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBTA.Utils;
 
-
 namespace DBTA
 {
-    public partial class CPU : Form
+    public partial class DISK : Form
     {
-        public string CPUname;
-        public bool CPUselect = false;
-        public CPU()
+        public string DISKname;
+        public bool DISKselect = false;
+        public DISK()
         {
             InitializeComponent();
             Table();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
         public void Table()
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from CPU_PC");
+            List<string> ab = Connection.query($"select * from DISK_PC");
             int nrows = ab.Count / 7;
             for (int i = 0; i < nrows; i++)
             {
@@ -45,7 +49,7 @@ namespace DBTA
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from CPU_PC WHERE BRAND='{textBox1.Text}'");
+            List<string> ab = Connection.query($"select * from DISK_PC WHERE VOLUME= '{textBox1.Text}'");
             int nrows = ab.Count / 7;
             for (int i = 0; i < nrows; i++)
             {
@@ -65,7 +69,7 @@ namespace DBTA
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from GPU WHERE CPUCORE={textBox2.Text}");
+            List<string> ab = Connection.query($"select * from DISK_PC WHERE DISKTYPE={textBox2.Text}");
             int nrows = ab.Count / 7;
             for (int i = 0; i < nrows; i++)
             {
@@ -80,19 +84,21 @@ namespace DBTA
                 dataGridView1.Rows[index].Cells[6].Value = ab[6 + 7 * index];
             }
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
-        }
+            try
+            {
+                DISKselect = true;
+                string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取DISK的名字
+                DISKname = id;
+                Close();
+            }
+            catch
+            {
 
-        private void CPU_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,21 +109,6 @@ namespace DBTA
         private void button3_Click(object sender, EventArgs e)
         {
             TableID2();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                CPUselect = true;
-                string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取GPU的名字
-                CPUname = id;
-                Close();
-            }
-            catch
-            {
-
-            }
         }
     }
 }

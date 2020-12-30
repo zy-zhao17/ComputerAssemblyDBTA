@@ -11,28 +11,25 @@ using DBTA.Utils;
 
 namespace DBTA
 {
-    
-    public partial class GPU : Form
+    public partial class BOARD : Form
     {
-        public string GPUname;
-        public bool GPUselect = false;
-
-        public GPU()
+        public string BOARDname;
+        public bool BOARDselect = false;
+        public BOARD()
         {
             InitializeComponent();
             Table();
         }
 
-        private void GPU_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
-        //从数据库读取数据显示在表格文件中
         public void Table()
         {
             dataGridView1.Rows.Clear();
-            
-            List<string> ab = Connection.query($"select * from GPU");
+
+            List<string> ab = Connection.query($"select * from BOARD");
             int nrows = ab.Count / 6;
             for (int i = 0; i < nrows; i++)
             {
@@ -46,12 +43,11 @@ namespace DBTA
                 dataGridView1.Rows[index].Cells[5].Value = ab[5 + 6 * index];
             }
         }
-        //根据容量查询数据
         public void TableID()
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from GPU WHERE VOLUME='{textBox1.Text}'");
+            List<string> ab = Connection.query($"select * from BOARD WHERE BOARDUSAGE='{textBox1.Text}'");
             int nrows = ab.Count / 6;
             for (int i = 0; i < nrows; i++)
             {
@@ -70,7 +66,7 @@ namespace DBTA
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from GPU WHERE BITS='{textBox2.Text}'");
+            List<string> ab = Connection.query($"select * from GPU WHERE SHAPE='{textBox2.Text}'");
             int nrows = ab.Count / 6;
             for (int i = 0; i < nrows; i++)
             {
@@ -85,9 +81,19 @@ namespace DBTA
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                BOARDselect = true;
+                string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取BOARD的名字
+                BOARDname = id;
+                Close();
+            }
+            catch
+            {
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,26 +104,6 @@ namespace DBTA
         private void button3_Click(object sender, EventArgs e)
         {
             TableID2();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                GPUselect = true;
-                string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取GPU的名字
-                GPUname = id;
-                Close();
-            }
-            catch
-            {
-
-            }
-        }
-
-        private void GPU_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
