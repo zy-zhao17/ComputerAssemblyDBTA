@@ -55,11 +55,24 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPU.Designer.cs">
+      <DependentUpon>CPU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPU.Designer.cs">
+      <DependentUpon>GPU.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -85,8 +98,14 @@
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CPU.resx">
+      <DependentUpon>CPU.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPU.resx">
+      <DependentUpon>GPU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

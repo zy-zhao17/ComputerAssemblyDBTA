@@ -41,9 +41,10 @@ namespace DBTA
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(46, 146);
+            this.button1.Location = new System.Drawing.Point(61, 182);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 0;
             this.button1.Text = "登录";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@ namespace DBTA
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(144, 146);
+            this.button2.Location = new System.Drawing.Point(192, 182);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 29);
             this.button2.TabIndex = 1;
             this.button2.Text = "注册";
             this.button2.UseVisualStyleBackColor = true;
@@ -62,41 +64,46 @@ namespace DBTA
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 36);
+            this.label1.Location = new System.Drawing.Point(96, 45);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.Size = new System.Drawing.Size(37, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "账号";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 84);
+            this.label2.Location = new System.Drawing.Point(96, 105);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "密码";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 33);
+            this.textBox1.Location = new System.Drawing.Point(192, 41);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(132, 25);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 84);
+            this.textBox2.Location = new System.Drawing.Point(192, 105);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.Size = new System.Drawing.Size(132, 25);
             this.textBox2.TabIndex = 5;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(242, 146);
+            this.button3.Location = new System.Drawing.Point(323, 182);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 29);
             this.button3.TabIndex = 6;
             this.button3.Text = "取消";
             this.button3.UseVisualStyleBackColor = true;
@@ -105,9 +112,10 @@ namespace DBTA
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(292, 9);
+            this.linkLabel1.Location = new System.Drawing.Point(389, 11);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(65, 12);
+            this.linkLabel1.Size = new System.Drawing.Size(82, 15);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "管理员登录";
@@ -115,9 +123,9 @@ namespace DBTA
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 207);
+            this.ClientSize = new System.Drawing.Size(492, 259);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);
@@ -127,8 +135,10 @@ namespace DBTA
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.Text = "欢迎登录！";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

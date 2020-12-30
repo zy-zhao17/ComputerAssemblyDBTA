@@ -49,5 +49,10 @@ namespace DBTA
             }
             else MessageBox.Show("你不是管理员！");
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

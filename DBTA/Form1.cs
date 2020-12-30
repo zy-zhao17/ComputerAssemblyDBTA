@@ -44,6 +44,19 @@ namespace DBTA
                 islogin = false;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GPU GPUSELECT = new GPU();
+            GPUSELECT.ShowDialog();
+            if(GPUSELECT.GPUselect == true)
+            {
+                textBox9.Text = GPUSELECT.GPUname;
+            }
+            
+        }
+
+        
     }
 }
 
