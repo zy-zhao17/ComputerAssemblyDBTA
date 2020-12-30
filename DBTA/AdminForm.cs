@@ -27,7 +27,7 @@ namespace DBTA
             new string[]{"显卡编号","显卡名称","显存容量","显存位宽","接口类型","市场价格"},
             new string[]{"电源编号","电源名称","额定功率","出线类型","市场价格"},
             new string[]{"机箱编号","机箱名称","机箱结构","面板接口","市场价格"},
-            new string[]{"装机单编号","装机单名称","发布者账号","CPU编号","散热器编号","主板编号","内存编号","内存条数","硬盘编号","显卡编号","电源编号","机箱编号"},
+            new string[]{"装机单编号","装机单名称","发布者账号","CPU编号","散热器编号","主板编号","内存编号","硬盘编号","显卡编号","电源编号","机箱编号","内存条数"},
             new string[]{"评论编号","装机单编号","发布者账号","评论时间","评论内容"},
             new string[]{"CPU编号","主板编号","某宝链接"},
             new string[]{"点赞者的账号","装机单编号","点赞时间"},
@@ -42,11 +42,11 @@ namespace DBTA
             new string[]{"FANNO","FANNAME","FANUSAGE","SPEED","PRICE"},
             new string[]{"BOARDNO","BOARDNAME","BOARDUSAGE","SHAPE","RAMSLOT","PRICE"},
             new string[]{"RAMNO","RAMNAME","VOLUME","GEN","FREQ","VOLT","PRICE"},
-            new string[]{"DISKNO","DISKNAME","VOLUME","DISKTYPE","SLOT","SHAPE","PRICE"},
+            new string[]{"DISKNO","DISKNAME","VOLUME","DISKTYPE", "SOLT", "SHAPE","PRICE"},
             new string[]{"GPUNO","GPUNAME","VOLUME","BITS","SLOT","PRICE"},
             new string[]{"POWERNO","POWERNAME","P","POWERTYPE","PRICE"},
             new string[]{"CASENO ","CASENAME","STRUC","PANEL","PRICE"},
-            new string[]{"LISTNO","LISTNAME","MNO","CPUNO","FANNO","BOARDNO","RAMNO","RAMNUM","DISKNO","GPUNO","POWERNO","CASENO"},
+            new string[]{"LISTNO","LISTNAME","MNO","CPUNO","FANNO","BOARDNO","RAMNO","DISKNO","GPUNO","POWERNO","CASENO","RAMNUM"},
             new string[]{"COMNO","LISTNO","MNO","COMTIME","COMCONTENT"},
             new string[]{"CPUNO","BOARDNO","LINK_TAO"},
             new string[]{"MNO","LISTNO","THUMBTIME"},
@@ -66,6 +66,8 @@ namespace DBTA
 
         private void adddata()
         {
+
+
 
         }
 
@@ -374,7 +376,26 @@ namespace DBTA
 
         private void modifydata()
         {
+            int idx = comboBox1.SelectedIndex;
+            if (idx == 0)
+            {
+                MessageBox.Show("请先选择一个数据表！");
+                return;
+            }
+            int nums = itemname[idx].Count();
+            string[] contents = new string[nums];
+            int rowidx = dataGridView1.SelectedRows.Count - 1;
+            DataGridViewRow dr = dataGridView1.SelectedRows[rowidx];
 
+            int prior = 1;
+            if (idx > 12) prior = 2;
+
+            for (int i = 0; i < nums; i++)
+            {
+                contents[i] = dr.Cells[i].Value.ToString();
+            }
+            new AdminEditForm(nums,comboBox1.Text, itemname[idx],itemkey[idx], contents, prior).ShowDialog();
+            getdata();
         }
 
 
