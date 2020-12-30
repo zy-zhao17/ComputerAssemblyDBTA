@@ -66,9 +66,22 @@ namespace DBTA
 
         private void adddata()
         {
+            int idx = comboBox1.SelectedIndex;
+            if (idx == 0)
+            {
+                MessageBox.Show("请先选择一个数据表！");
+                return;
+            }
+            int nums = itemname[idx].Count();
+            string[] contents = new string[nums];
+            int rowidx = dataGridView1.SelectedRows.Count - 1;
+            DataGridViewRow dr = dataGridView1.SelectedRows[rowidx];
 
+            int prior = 1;
+            if (idx > 12) prior = 2;
 
-
+            new AdminEditForm(false,nums, comboBox1.Text, itemname[idx], itemkey[idx], contents, prior).ShowDialog();
+            getdata();
         }
 
         //删除数据时，应当满足表级完整性约束！
@@ -394,7 +407,7 @@ namespace DBTA
             {
                 contents[i] = dr.Cells[i].Value.ToString();
             }
-            new AdminEditForm(nums,comboBox1.Text, itemname[idx],itemkey[idx], contents, prior).ShowDialog();
+            new AdminEditForm(true,nums,comboBox1.Text, itemname[idx],itemkey[idx], contents, prior).ShowDialog();
             getdata();
         }
 
