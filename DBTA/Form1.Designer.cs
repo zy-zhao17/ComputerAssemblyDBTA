@@ -32,7 +32,6 @@ namespace DBTA
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -98,20 +97,10 @@ namespace DBTA
             this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 2;
             // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button10.Location = new System.Drawing.Point(630, 411);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(76, 36);
-            this.button10.TabIndex = 62;
-            this.button10.Text = "取消";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.Location = new System.Drawing.Point(386, 411);
+            this.button9.Location = new System.Drawing.Point(499, 413);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(82, 36);
             this.button9.TabIndex = 61;
@@ -126,6 +115,7 @@ namespace DBTA
             this.button8.TabIndex = 60;
             this.button8.Text = "选择";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -135,6 +125,7 @@ namespace DBTA
             this.button7.TabIndex = 59;
             this.button7.Text = "选择";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -144,6 +135,7 @@ namespace DBTA
             this.button6.TabIndex = 58;
             this.button6.Text = "选择";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -153,6 +145,7 @@ namespace DBTA
             this.button5.TabIndex = 57;
             this.button5.Text = "选择";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -162,6 +155,7 @@ namespace DBTA
             this.button4.TabIndex = 56;
             this.button4.Text = "选择";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -171,6 +165,7 @@ namespace DBTA
             this.button3.TabIndex = 55;
             this.button3.Text = "选择";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -190,6 +185,7 @@ namespace DBTA
             this.button1.TabIndex = 53;
             this.button1.Text = "选择";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox11
             // 
@@ -376,7 +372,6 @@ namespace DBTA
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
-            this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -424,7 +419,6 @@ namespace DBTA
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;

@@ -61,6 +61,18 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOARD.Designer.cs">
+      <DependentUpon>BOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="case.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="case.Designer.cs">
+      <DependentUpon>case.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,18 @@
       <DependentUpon>CPU.cs</DependentUpon>
     </Compile>
     <Compile Include="Dao.cs" />
+    <Compile Include="DISK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DISK.Designer.cs">
+      <DependentUpon>DISK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAN.Designer.cs">
+      <DependentUpon>FAN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,8 +110,20 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="POWER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POWER.Designer.cs">
+      <DependentUpon>POWER.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RAM.Designer.cs">
+      <DependentUpon>RAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,8 +140,20 @@
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BOARD.resx">
+      <DependentUpon>BOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="case.resx">
+      <DependentUpon>case.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CPU.resx">
       <DependentUpon>CPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DISK.resx">
+      <DependentUpon>DISK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAN.resx">
+      <DependentUpon>FAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -116,6 +164,9 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="POWER.resx">
+      <DependentUpon>POWER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -125,6 +176,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RAM.resx">
+      <DependentUpon>RAM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
