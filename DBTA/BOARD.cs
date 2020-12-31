@@ -15,6 +15,7 @@ namespace DBTA
     {
         public string BOARDname;
         public string BOARDNO;
+        public string BOARDPRICE;
         public bool BOARDselect = false;
         public BOARD()
         {
@@ -89,6 +90,8 @@ namespace DBTA
                 BOARDselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取BOARD的名字
                 string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string price = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                BOARDPRICE = price;
                 BOARDNO = no;
                 BOARDname = id;
                 Close();

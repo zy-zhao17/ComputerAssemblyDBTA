@@ -14,6 +14,7 @@ namespace DBTA
     {
         public string FANname;
         public string FANNO;
+        public string FANPRICE;
         public bool FANselect = false;
         public FAN()
         {
@@ -51,8 +52,10 @@ namespace DBTA
                 FANselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取FAN的名字
                 string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string price = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
                 FANNO = no;
                 FANname = id;
+                FANPRICE = price;
                 Close();
             }
             catch

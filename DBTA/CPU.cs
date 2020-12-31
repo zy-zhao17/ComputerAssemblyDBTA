@@ -16,6 +16,7 @@ namespace DBTA
     {
         public string CPUname;
         public string CPUNO;
+        public string CPUPRICE;
         public bool CPUselect = false;
         public CPU()
         {
@@ -113,6 +114,8 @@ namespace DBTA
                 CPUselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取CPU的名字
                 string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string price = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+                CPUPRICE = price;
                 CPUNO = no;
                 CPUname = id;
                 Close();

@@ -62,9 +62,9 @@ namespace DBTA
             this.label14 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -76,6 +76,8 @@ namespace DBTA
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,19 +87,18 @@ namespace DBTA
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(342, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(456, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 12);
+            this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 2;
             // 
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.Location = new System.Drawing.Point(510, 351);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
+            this.button9.Location = new System.Drawing.Point(680, 439);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(110, 29);
+            this.button9.Size = new System.Drawing.Size(147, 36);
             this.button9.TabIndex = 61;
             this.button9.Text = "上传到论坛！";
             this.button9.UseVisualStyleBackColor = true;
@@ -105,10 +106,10 @@ namespace DBTA
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(510, 237);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Location = new System.Drawing.Point(680, 296);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(57, 20);
+            this.button8.Size = new System.Drawing.Size(76, 25);
             this.button8.TabIndex = 60;
             this.button8.Text = "选择";
             this.button8.UseVisualStyleBackColor = true;
@@ -116,10 +117,10 @@ namespace DBTA
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(510, 262);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Location = new System.Drawing.Point(680, 328);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(57, 20);
+            this.button7.Size = new System.Drawing.Size(76, 25);
             this.button7.TabIndex = 59;
             this.button7.Text = "选择";
             this.button7.UseVisualStyleBackColor = true;
@@ -127,10 +128,10 @@ namespace DBTA
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(510, 113);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Location = new System.Drawing.Point(680, 141);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(57, 20);
+            this.button6.Size = new System.Drawing.Size(76, 25);
             this.button6.TabIndex = 58;
             this.button6.Text = "选择";
             this.button6.UseVisualStyleBackColor = true;
@@ -138,10 +139,10 @@ namespace DBTA
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(510, 138);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(680, 172);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(57, 20);
+            this.button5.Size = new System.Drawing.Size(76, 25);
             this.button5.TabIndex = 57;
             this.button5.Text = "选择";
             this.button5.UseVisualStyleBackColor = true;
@@ -149,10 +150,10 @@ namespace DBTA
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(510, 163);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(680, 204);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(57, 20);
+            this.button4.Size = new System.Drawing.Size(76, 25);
             this.button4.TabIndex = 56;
             this.button4.Text = "选择";
             this.button4.UseVisualStyleBackColor = true;
@@ -160,10 +161,10 @@ namespace DBTA
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(510, 187);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(680, 234);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(57, 20);
+            this.button3.Size = new System.Drawing.Size(76, 25);
             this.button3.TabIndex = 55;
             this.button3.Text = "选择";
             this.button3.UseVisualStyleBackColor = true;
@@ -171,10 +172,10 @@ namespace DBTA
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(510, 212);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(680, 265);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 20);
+            this.button2.Size = new System.Drawing.Size(76, 25);
             this.button2.TabIndex = 54;
             this.button2.Text = "选择";
             this.button2.UseVisualStyleBackColor = true;
@@ -182,10 +183,10 @@ namespace DBTA
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(510, 87);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(680, 109);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 20);
+            this.button1.Size = new System.Drawing.Size(76, 25);
             this.button1.TabIndex = 53;
             this.button1.Text = "选择";
             this.button1.UseVisualStyleBackColor = true;
@@ -193,92 +194,91 @@ namespace DBTA
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(265, 261);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox11.Location = new System.Drawing.Point(353, 326);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(228, 21);
+            this.textBox11.Size = new System.Drawing.Size(303, 25);
             this.textBox11.TabIndex = 52;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(265, 236);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox10.Location = new System.Drawing.Point(353, 295);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(228, 21);
+            this.textBox10.Size = new System.Drawing.Size(303, 25);
             this.textBox10.TabIndex = 51;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(265, 211);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox9.Location = new System.Drawing.Point(353, 264);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(228, 21);
+            this.textBox9.Size = new System.Drawing.Size(303, 25);
             this.textBox9.TabIndex = 50;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(265, 60);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.Location = new System.Drawing.Point(353, 75);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(228, 21);
+            this.textBox7.Size = new System.Drawing.Size(303, 25);
             this.textBox7.TabIndex = 49;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(265, 87);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.Location = new System.Drawing.Point(353, 109);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(228, 21);
+            this.textBox6.Size = new System.Drawing.Size(303, 25);
             this.textBox6.TabIndex = 48;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(265, 112);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Location = new System.Drawing.Point(353, 140);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(228, 21);
+            this.textBox5.Size = new System.Drawing.Size(303, 25);
             this.textBox5.TabIndex = 47;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(265, 187);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Location = new System.Drawing.Point(353, 234);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(228, 21);
+            this.textBox4.Size = new System.Drawing.Size(303, 25);
             this.textBox4.TabIndex = 46;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(265, 162);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Location = new System.Drawing.Point(353, 202);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(228, 21);
+            this.textBox3.Size = new System.Drawing.Size(303, 25);
             this.textBox3.TabIndex = 45;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(265, 137);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(353, 171);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(228, 21);
+            this.textBox2.Size = new System.Drawing.Size(303, 25);
             this.textBox2.TabIndex = 44;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("楷体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(299, 30);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(399, 38);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 22);
+            this.label11.Size = new System.Drawing.Size(180, 28);
             this.label11.TabIndex = 42;
             this.label11.Text = "自定义装机单";
             // 
@@ -286,10 +286,9 @@ namespace DBTA
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(116, 60);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(155, 75);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 20);
+            this.label9.Size = new System.Drawing.Size(107, 25);
             this.label9.TabIndex = 40;
             this.label9.Text = "装机单名称";
             // 
@@ -297,10 +296,9 @@ namespace DBTA
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(114, 261);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(152, 326);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 20);
+            this.label8.Size = new System.Drawing.Size(59, 25);
             this.label8.TabIndex = 39;
             this.label8.Text = "CASE";
             // 
@@ -308,10 +306,9 @@ namespace DBTA
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(116, 236);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(155, 295);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 20);
+            this.label7.Size = new System.Drawing.Size(80, 25);
             this.label7.TabIndex = 38;
             this.label7.Text = "POWER";
             // 
@@ -319,10 +316,9 @@ namespace DBTA
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(117, 211);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(156, 264);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 20);
+            this.label6.Size = new System.Drawing.Size(52, 25);
             this.label6.TabIndex = 37;
             this.label6.Text = "GPU";
             // 
@@ -330,10 +326,9 @@ namespace DBTA
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(117, 187);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(156, 234);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 20);
+            this.label5.Size = new System.Drawing.Size(55, 25);
             this.label5.TabIndex = 36;
             this.label5.Text = "DISK";
             // 
@@ -341,10 +336,9 @@ namespace DBTA
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(117, 162);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(156, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 20);
+            this.label4.Size = new System.Drawing.Size(56, 25);
             this.label4.TabIndex = 35;
             this.label4.Text = "RAM";
             // 
@@ -352,10 +346,9 @@ namespace DBTA
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(116, 137);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(155, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 34;
             this.label3.Text = "BOARD";
             // 
@@ -363,10 +356,9 @@ namespace DBTA
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(116, 112);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(155, 140);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 20);
+            this.label12.Size = new System.Drawing.Size(50, 25);
             this.label12.TabIndex = 33;
             this.label12.Text = "FAN";
             // 
@@ -374,29 +366,28 @@ namespace DBTA
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(116, 87);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(155, 109);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 20);
+            this.label13.Size = new System.Drawing.Size(51, 25);
             this.label13.TabIndex = 32;
             this.label13.Text = "CPU";
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(265, 286);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox8.Location = new System.Drawing.Point(353, 358);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(228, 21);
+            this.textBox8.Size = new System.Drawing.Size(303, 25);
             this.textBox8.TabIndex = 62;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(116, 286);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(155, 358);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 20);
+            this.label14.Size = new System.Drawing.Size(88, 25);
             this.label14.TabIndex = 63;
             this.label14.Text = "内存条数";
             // 
@@ -404,10 +395,11 @@ namespace DBTA
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 9);
+            this.tabControl1.Location = new System.Drawing.Point(16, 11);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 429);
+            this.tabControl1.Size = new System.Drawing.Size(1035, 536);
             this.tabControl1.TabIndex = 64;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.onTabSelectChanged);
             // 
@@ -446,46 +438,48 @@ namespace DBTA
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 403);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1027, 507);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "装机";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(155, 411);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 25);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "总价";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(353, 411);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(303, 25);
+            this.textBox1.TabIndex = 64;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.button11);
             this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 403);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1027, 507);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "论坛";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(645, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 12);
-            this.label1.TabIndex = 65;
-            this.label1.Text = "欢迎您，游客";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(728, 9);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(53, 12);
-            this.linkLabel1.TabIndex = 66;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "请登录！";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // dataGridView1
             // 
@@ -502,6 +496,7 @@ namespace DBTA
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(765, 368);
@@ -550,6 +545,7 @@ namespace DBTA
             // Column1
             // 
             this.Column1.HeaderText = "装机单名称";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 380;
@@ -557,6 +553,7 @@ namespace DBTA
             // Column2
             // 
             this.Column2.HeaderText = "总价格";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 65;
@@ -591,13 +588,14 @@ namespace DBTA
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Login";
             this.tabControl1.ResumeLayout(false);

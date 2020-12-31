@@ -16,6 +16,7 @@ namespace DBTA
     {
         public string RAMname;
         public string RAMNO;
+        public string RAMPRICE;
         public bool RAMselect = false;
         public RAM()
         {
@@ -72,8 +73,10 @@ namespace DBTA
             try
             {
                 RAMselect = true;
-                string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取BOARD的名字
+                string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取RAM的名字
                 string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string price = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+                RAMPRICE = price;
                 RAMNO = no;
                 RAMname = id;
                 Close();

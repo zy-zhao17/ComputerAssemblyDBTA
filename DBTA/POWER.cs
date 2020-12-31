@@ -16,6 +16,7 @@ namespace DBTA
     {
         public string POWERname;
         public string POWERNO;
+        public string POWERPRICE;
         public bool POWERselect = false;
         public POWER()
         {
@@ -71,6 +72,8 @@ namespace DBTA
                 POWERselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取POWER的名字
                 string no= dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string price = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                POWERPRICE = price;
                 POWERname = id;
                 POWERNO = no;
                 Close();
