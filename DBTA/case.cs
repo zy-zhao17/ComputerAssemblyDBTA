@@ -15,6 +15,7 @@ namespace DBTA
     {
         public string CASEname;
         public bool CASEselect = false;
+        public string CASENO;
         public @case()
         {
             InitializeComponent();
@@ -68,6 +69,8 @@ namespace DBTA
             {
                 CASEselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取CASE的名字
+                string no= dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                CASENO = no;
                 CASEname = id;
                 Close();
             }

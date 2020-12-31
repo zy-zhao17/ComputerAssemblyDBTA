@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBTA.Utils;
 
 namespace DBTA
 {
     public partial class Form1 : Form
     {
         private bool islogin = false;
-
+        private string text;
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace DBTA
                 {
                     int right = label1.Right;
                     label1.Text = "欢迎您，" + lf.namestr;
+                    text= lf.namestr;
                     label1.Left = right - label1.Width;
                     linkLabel1.Text = "退出登录";
                 }
@@ -86,7 +88,7 @@ namespace DBTA
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)  
         {
             RAM RAMSELECT = new RAM();
             RAMSELECT.ShowDialog();
@@ -124,6 +126,18 @@ namespace DBTA
             {
                 textBox11.Text = CASESELECT.CASEname;
             }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if(islogin)
+            {
+                string a = text;
+                Connection.query($"insert into LIST_PC (LISTNO, LISTNAME, MNO, CPUNO, FANNO,BOARDNO,RAMNO,RAMNUM,DISKNO,GPUNO,POWERNO,CASENO) values('{Guid.NewGuid().ToString()}', '{textBox7.Text}', '{a}', '{textBox6.Text}', '{textBox5.Text}', '{textBox2.Text}', '{textBox3.Text}',{textBox8.Text}, '{textBox4.Text}', '{textBox9.Text}', '{textBox10.Text}', '{textBox11.Text}') ");
+                MessageBox.Show("保存装机单成功！");
+            }
+            else MessageBox.Show("您不是会员，无法保存装机单！");
+
         }
     }
 }
