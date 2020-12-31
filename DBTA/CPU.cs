@@ -66,7 +66,7 @@ namespace DBTA
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from GPU WHERE CPUCORE={textBox2.Text}");
+            List<string> ab = Connection.query($"select * from CPU_PC WHERE CPUCORE={textBox2.Text}");
             int nrows = ab.Count / 7;
             for (int i = 0; i < nrows; i++)
             {
@@ -111,7 +111,7 @@ namespace DBTA
             try
             {
                 CPUselect = true;
-                string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取GPU的名字
+                string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取CPU的名字
                 string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 CPUNO = no;
                 CPUname = id;

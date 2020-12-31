@@ -40,7 +40,7 @@ namespace DBTA
                 {
                     int right = label1.Right;
                     label1.Text = "欢迎您，" + lf.namestr;
-                    text= lf.namestr;
+                    text= lf.nostr;
                     label1.Left = right - label1.Width;
                     linkLabel1.Text = "退出登录";
                 }

@@ -67,7 +67,7 @@ namespace DBTA
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from GPU WHERE SHAPE='{textBox2.Text}'");
+            List<string> ab = Connection.query($"select * from BOARD WHERE SHAPE='{textBox2.Text}'");
             int nrows = ab.Count / 6;
             for (int i = 0; i < nrows; i++)
             {
