@@ -103,6 +103,12 @@
     <Compile Include="GPU.Designer.cs">
       <DependentUpon>GPU.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListPCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPCForm.Designer.cs">
+      <DependentUpon>ListPCForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -185,82 +185,6 @@ namespace DBTA
         }
 
 
-
-        private void getListdata()
-        {   //0      1        2    3    4     5        6     7      8     9      10      11    12
-            //LISTNO LISTNAME MNO CPUNO FANNO BOARDNO RAMNO DISKNO GPUNO POWERNO CASENO RAMNUM POSTTIME
-            List<string> ab = Connection.query("select * from list_PC");
-            dataGridView1.Rows.Clear();
-
-            int nrows = ab.Count / 13;
-            for (int i = 0; i < nrows; i++)
-            {
-                DataGridViewRow row = new DataGridViewRow();
-                int index = dataGridView1.Rows.Add(row);
-                string listno = ab[0 + 13 * index];
-                string listname = ab[1 + 13 * index];
-                string mno = ab[2 + 13 * index];
-                string cpuno = ab[3 + 13 * index];
-                string fanno = ab[4 + 13 * index];
-                string boardno = ab[5 + 13 * index];
-                string ramno = ab[6 + 13 * index];
-                string diskno = ab[7 + 13 * index];
-                string gpuno = ab[8 + 13 * index];
-                string powerno = ab[9 + 13 * index];
-                string caseno = ab[10 + 13 * index];
-                int ramnum = int.Parse(ab[11 + 13 * index]);
-                string posttime = ab[12 + 13 * index];
-
-                int price = 0;
-                price += int.Parse(Connection.query($"select price from CPU_PC where cpuno='{cpuno}'")[0]);
-                price += int.Parse(Connection.query($"select price from FAN where fanno='{fanno}'")[0]);
-                price += int.Parse(Connection.query($"select price from BOARD where boardno='{boardno}'")[0]);
-                price += int.Parse(Connection.query($"select price from RAM where ramno='{ramno}'")[0]) * ramnum;
-                price += int.Parse(Connection.query($"select price from DISK_PC where diskno='{diskno}'")[0]);
-                price += int.Parse(Connection.query($"select price from GPU where gpuno='{gpuno}'")[0]);
-                price += int.Parse(Connection.query($"select price from POWER_PC where powerno='{powerno}'")[0]);
-                price += int.Parse(Connection.query($"select price from CASE_PC where caseno='{caseno}'")[0]);
-
-                string mname = Connection.query($"select MNAME from Mem where mno='{mno}'")[0];
-
-                int nthumb = int.Parse(Connection.query($"select count(*) from thumb where LISTNO='{listno}'")[0]);
-                int nfavo = int.Parse(Connection.query($"select count(*) from favourite where LISTNO='{listno}'")[0]);
-
-
-                dataGridView1.Rows[index].Cells[0].Value = listname;//名称
-                dataGridView1.Rows[index].Cells[1].Value = price;//总价格
-                dataGridView1.Rows[index].Cells[2].Value = mname;//发布人
-                dataGridView1.Rows[index].Cells[3].Value = posttime;//发布时间
-                dataGridView1.Rows[index].Cells[4].Value = nthumb;//点赞数
-                dataGridView1.Rows[index].Cells[5].Value = nfavo;//收藏数
-            }
-        }
-
-
-        //刷新论坛
-        private void button10_Click(object sender, EventArgs e)
-        {
-            getListdata();
-        }
-        //查看论坛
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //查看收藏
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void onTabSelectChanged(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedIndex == 1)
-            {
-                getListdata();
-            }
-        }
         private void Count()
         {
             if (textBox6.Text != "")
@@ -319,6 +243,109 @@ namespace DBTA
         }
 
 
+
+
+        private void onTabSelectChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                getListdata();
+            }
+        }
+
+        private void getListdata(bool onlyfavo = false)
+        {   //0      1        2    3    4     5        6     7      8     9      10      11    12
+            //LISTNO LISTNAME MNO CPUNO FANNO BOARDNO RAMNO DISKNO GPUNO POWERNO CASENO RAMNUM POSTTIME
+            List<string> ab;
+            if (onlyfavo)
+            {
+                ab = Connection.query($"select list_PC.LISTNO,list_PC.LISTNAME,list_PC.MNO,list_PC.CPUNO,list_PC.FANNO,list_PC.BOARDNO,list_PC.RAMNO,list_PC.DISKNO,list_PC.GPUNO,list_PC.POWERNO,list_PC.CASENO,list_PC.RAMNUM,list_PC.POSTTIME from list_PC,FAVOURITE where list_PC.MNO='{text}' and list_PC.LISTNO=FAVOURITE.LISTNO");
+            }
+            else
+            {
+                ab = Connection.query("select * from list_PC");
+            }
+
+            dataGridView1.Rows.Clear();
+
+            int nrows = ab.Count / 13;
+            for (int i = 0; i < nrows; i++)
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                int index = dataGridView1.Rows.Add(row);
+                string listno = ab[0 + 13 * index];
+                string listname = ab[1 + 13 * index];
+                string mno = ab[2 + 13 * index];
+                string cpuno = ab[3 + 13 * index];
+                string fanno = ab[4 + 13 * index];
+                string boardno = ab[5 + 13 * index];
+                string ramno = ab[6 + 13 * index];
+                string diskno = ab[7 + 13 * index];
+                string gpuno = ab[8 + 13 * index];
+                string powerno = ab[9 + 13 * index];
+                string caseno = ab[10 + 13 * index];
+                int ramnum = int.Parse(ab[11 + 13 * index]);
+                string posttime = ab[12 + 13 * index];
+
+                int price = 0;
+                price += int.Parse(Connection.query($"select price from CPU_PC where cpuno='{cpuno}'")[0]);
+                price += int.Parse(Connection.query($"select price from FAN where fanno='{fanno}'")[0]);
+                price += int.Parse(Connection.query($"select price from BOARD where boardno='{boardno}'")[0]);
+                price += int.Parse(Connection.query($"select price from RAM where ramno='{ramno}'")[0]) * ramnum;
+                price += int.Parse(Connection.query($"select price from DISK_PC where diskno='{diskno}'")[0]);
+                price += int.Parse(Connection.query($"select price from GPU where gpuno='{gpuno}'")[0]);
+                price += int.Parse(Connection.query($"select price from POWER_PC where powerno='{powerno}'")[0]);
+                price += int.Parse(Connection.query($"select price from CASE_PC where caseno='{caseno}'")[0]);
+
+                string mname = Connection.query($"select MNAME from Mem where mno='{mno}'")[0];
+
+                int nthumb = int.Parse(Connection.query($"select count(*) from thumb where LISTNO='{listno}'")[0]);
+                int nfavo = int.Parse(Connection.query($"select count(*) from favourite where LISTNO='{listno}'")[0]);
+
+
+                dataGridView1.Rows[index].Cells[0].Value = listname;//名称
+                dataGridView1.Rows[index].Cells[1].Value = price;//总价格
+                dataGridView1.Rows[index].Cells[2].Value = mname;//发布人
+                dataGridView1.Rows[index].Cells[3].Value = posttime;//发布时间
+                dataGridView1.Rows[index].Cells[4].Value = nthumb;//点赞数
+                dataGridView1.Rows[index].Cells[5].Value = nfavo;//收藏数
+            }
+        }
+
+
+        private void showlist()
+        {
+
+        }
+
+        //刷新论坛
+        private void button10_Click(object sender, EventArgs e)
+        {
+            getListdata();
+        }
+        //查看具体装机单
+        private void button11_Click(object sender, EventArgs e)
+        {
+            showlist();
+        }
+
+        //查看收藏
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (islogin)
+            {
+                getListdata(true);
+            }
+            else
+            {
+                MessageBox.Show("请先登录！");
+            }
+        }
+
+        private void onCellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 
