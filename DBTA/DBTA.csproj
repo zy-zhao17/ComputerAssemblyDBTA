@@ -115,6 +115,12 @@
     <Compile Include="GPU.Designer.cs">
       <DependentUpon>GPU.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListPCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPCForm.Designer.cs">
+      <DependentUpon>ListPCForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GPU.resx">
       <DependentUpon>GPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListPCForm.resx">
+      <DependentUpon>ListPCForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
