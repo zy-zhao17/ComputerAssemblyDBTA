@@ -67,6 +67,12 @@
     <Compile Include="BOARD.Designer.cs">
       <DependentUpon>BOARD.cs</DependentUpon>
     </Compile>
+    <Compile Include="BOARDPAIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOARDPAIR.Designer.cs">
+      <DependentUpon>BOARDPAIR.cs</DependentUpon>
+    </Compile>
     <Compile Include="case.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="CPU.Designer.cs">
       <DependentUpon>CPU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPUPAIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPUPAIR.Designer.cs">
+      <DependentUpon>CPUPAIR.cs</DependentUpon>
     </Compile>
     <Compile Include="DISK.cs">
       <SubType>Form</SubType>
@@ -151,11 +163,17 @@
     <EmbeddedResource Include="BOARD.resx">
       <DependentUpon>BOARD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BOARDPAIR.resx">
+      <DependentUpon>BOARDPAIR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="case.resx">
       <DependentUpon>case.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPU.resx">
       <DependentUpon>CPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPUPAIR.resx">
+      <DependentUpon>CPUPAIR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DISK.resx">
       <DependentUpon>DISK.cs</DependentUpon>

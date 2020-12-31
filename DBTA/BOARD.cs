@@ -16,6 +16,8 @@ namespace DBTA
         public string BOARDname;
         public string BOARDNO;
         public string BOARDPRICE;
+        public string CPUBOARD;
+        public bool recommendcpu = false;
         public bool BOARDselect = false;
         public BOARD()
         {
@@ -110,6 +112,24 @@ namespace DBTA
         private void button3_Click(object sender, EventArgs e)
         {
             TableID2();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                recommendcpu = true;
+                string boardno = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();//获取board的no
+                CPUBOARD = boardno;
+                BOARDPAIR RECOMMEND = new BOARDPAIR(CPUBOARD);
+                RECOMMEND.ShowDialog();
+
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }
