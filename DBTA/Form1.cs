@@ -230,7 +230,7 @@ namespace DBTA
             List<string> ab;
             if (onlyfavo)
             {
-                ab = Connection.query($"select list_PC.LISTNO,list_PC.LISTNAME,list_PC.MNO,list_PC.CPUNO,list_PC.FANNO,list_PC.BOARDNO,list_PC.RAMNO,list_PC.DISKNO,list_PC.GPUNO,list_PC.POWERNO,list_PC.CASENO,list_PC.RAMNUM,list_PC.POSTTIME from list_PC,FAVOURITE where list_PC.MNO='{text}' and list_PC.LISTNO=FAVOURITE.LISTNO");
+                ab = Connection.query($"select list_PC.LISTNO,list_PC.LISTNAME,list_PC.MNO,list_PC.CPUNO,list_PC.FANNO,list_PC.BOARDNO,list_PC.RAMNO,list_PC.DISKNO,list_PC.GPUNO,list_PC.POWERNO,list_PC.CASENO,list_PC.RAMNUM,list_PC.POSTTIME from list_PC,FAVOURITE where FAVOURITE.MNO='{text}' and list_PC.LISTNO=FAVOURITE.LISTNO");
             }
             else
             {
@@ -299,8 +299,15 @@ namespace DBTA
 
         private void showlist()
         {
-            new ListPCForm(dataGridView1.SelectedRows[0].Tag.ToString(),islogin,text).ShowDialog();
-            getListdata();
+            if (dataGridView1.Rows.Count > 0)
+            {
+                new ListPCForm(dataGridView1.SelectedRows[0].Tag.ToString(), islogin, text).ShowDialog();
+                getListdata();
+            }
+            else
+            {
+                MessageBox.Show("请先选择一个装机单！");
+            }
         }
 
         //刷新论坛
