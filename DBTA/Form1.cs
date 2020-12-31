@@ -23,15 +23,15 @@ namespace DBTA
         private string ramno;
         private string diskno;
         private string powerno;
-        private int cpuprice;
-        private int fanprice;
-        private int boardprice;
-        private int ramprice;
-        private int diskprice;
-        private int powerprice;
-        private int caseprice;
-        private int gpuprice;
-        private int ramnum;
+        private int cpuprice=0;
+        private int fanprice=0;
+        private int boardprice=0;
+        private int ramprice=0;
+        private int diskprice=0;
+        private int powerprice=0;
+        private int caseprice=0;
+        private int gpuprice=0;
+        private int ramnum=0;
         private int PRICE = 0;
         public Form1()
         {
