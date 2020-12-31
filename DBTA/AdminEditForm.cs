@@ -74,6 +74,12 @@ namespace DBTA
             {
                 labels[i].Text = names[i];
                 boxes[i].Text = contents[i];
+                //删除char前面的空格
+                while((boxes[i].Text.Count()>0)&&(boxes[i].Text[boxes[i].Text.Count()-1]==' '))
+                {
+                    boxes[i].Text=boxes[i].Text.Remove(boxes[i].Text.Count() - 1);
+                }
+
             }
             for(int i = num; i < 12; i++)
             {
@@ -109,12 +115,30 @@ namespace DBTA
                 {
                     for (int i = 2; i < num; i++)
                     {
-                        Connection.query($"UPDATE {tablename} SET {keys[i]} = '{boxes[i].Text}' WHERE {keys[0]} = '{boxes[0].Text}' AND  WHERE {keys[1]} = '{boxes[1].Text}'");
+                        Connection.query($"UPDATE {tablename} SET {keys[i]} = '{boxes[i].Text}' WHERE {keys[0]} = '{boxes[0].Text}' AND  {keys[1]} = '{boxes[1].Text}'");
                     }
                 }
             }
             else
             {
+                StringBuilder sb = new StringBuilder("insert into ");
+                sb.Append(tablename);
+                sb.Append(" (");
+                for(int i = 0; i < num-1; i++)
+                {
+                    sb.Append(keys[i]);
+                    sb.Append(", ");
+                }
+                sb.Append(keys[num - 1]);
+                sb.Append(") values('");
+                for(int i = 0; i < num - 1; i++)
+                {
+                    sb.Append(boxes[i].Text);
+                    sb.Append("', '");
+                }
+                sb.Append(boxes[num - 1].Text);
+                sb.Append("')");
+                Connection.query(sb.ToString());
 
                 //"insert into CPU_PC (CPUNO, CPUNAME,BRAND,SLOT,CPUCORE,INTEGRAPH,PRICE) values('CPU00010', '酷睿i9 10900K', 'Intel', 'LGA 1200', 10, 'Y', 4099); ";
             }
