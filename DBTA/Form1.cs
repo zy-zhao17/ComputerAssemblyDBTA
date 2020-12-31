@@ -23,15 +23,15 @@ namespace DBTA
         private string ramno;
         private string diskno;
         private string powerno;
-        private int cpuprice;
-        private int fanprice;
-        private int boardprice;
-        private int ramprice;
-        private int diskprice;
-        private int powerprice;
-        private int caseprice;
-        private int gpuprice;
-        private int ramnum;
+        private int cpuprice=0;
+        private int fanprice=0;
+        private int boardprice=0;
+        private int ramprice=0;
+        private int diskprice=0;
+        private int powerprice=0;
+        private int caseprice=0;
+        private int gpuprice=0;
+        private int ramnum=0;
         private int PRICE = 0;
         public Form1()
         {
@@ -263,48 +263,15 @@ namespace DBTA
         }
         private void Count()
         {
-            if (textBox6.Text != "")
+
+            if (textBox8.Text != "")
             {
-                PRICE = PRICE + cpuprice;
                 
-            }
-            if (textBox9.Text != "")
-            {
-                PRICE = PRICE + gpuprice;
-            }
-            if (textBox5.Text != "")
-            {
-                PRICE = PRICE + fanprice;
-            }
-            if (textBox2.Text != "")
-            {
-                PRICE = PRICE + boardprice;
-            }
-            if (textBox3.Text != "")
-            {
-                if (textBox8.Text == "")
-                {
-                    PRICE = PRICE + ramprice;
-                }
-                else
-                {
-                    int.TryParse(textBox8.Text, out ramnum);
-                    PRICE = PRICE + ramnum * ramprice;
-                }
+                 int.TryParse(textBox8.Text, out ramnum);
 
             }
-            if (textBox4.Text != "")
-            {
-                PRICE = PRICE + diskprice;
-            }
-            if (textBox10.Text != "")
-            {
-                PRICE = PRICE + powerprice;
-            }
-            if (textBox11.Text != "")
-            {
-                PRICE = PRICE + caseprice;
-            }
+           
+            PRICE= cpuprice+ gpuprice+ fanprice+ boardprice+ ramnum * ramprice + diskprice+ powerprice+ caseprice;
             textBox1.Text = Convert.ToString(PRICE);
         }
 
