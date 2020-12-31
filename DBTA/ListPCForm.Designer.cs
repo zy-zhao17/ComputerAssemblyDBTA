@@ -57,6 +57,7 @@ namespace DBTA
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +97,7 @@ namespace DBTA
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(171, 415);
+            this.button2.Location = new System.Drawing.Point(131, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 43;
@@ -106,7 +107,7 @@ namespace DBTA
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(90, 415);
+            this.button1.Location = new System.Drawing.Point(50, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 42;
@@ -235,7 +236,7 @@ namespace DBTA
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(252, 415);
+            this.button3.Location = new System.Drawing.Point(212, 415);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 56;
@@ -287,11 +288,11 @@ namespace DBTA
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(333, 415);
+            this.button4.Location = new System.Drawing.Point(293, 415);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 59;
-            this.button4.Text = "关闭";
+            this.button4.Text = "关注作者！";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -304,11 +305,22 @@ namespace DBTA
             this.label10.TabIndex = 60;
             this.label10.Text = "说点什么...";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(374, 415);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 61;
+            this.button5.Text = "关闭";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // ListPCForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox10);
@@ -371,5 +383,6 @@ namespace DBTA
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button5;
     }
 }

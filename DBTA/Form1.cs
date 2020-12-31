@@ -300,6 +300,7 @@ namespace DBTA
         private void showlist()
         {
             new ListPCForm(dataGridView1.SelectedRows[0].Tag.ToString(),islogin,text).ShowDialog();
+            getListdata();
         }
 
         //刷新论坛

@@ -25,7 +25,7 @@ namespace DBTA
             //"insert into CPU_PC (CPUNO, CPUNAME,BRAND,SLOT,CPUCORE,INTEGRAPH,PRICE) values('CPU00010', '酷睿i9 10900K', 'Intel', 'LGA 1200', 10, 'Y', 4099); ";
             if (textBox3.Text.Equals(textBox4.Text))
             {
-                Connection.query($"insert into Mem (MNO,MPSWD,MNAME,MBIRTHDAY,MEMAIL,MTEL,MPOINT) values('{textBox1.Text}','{textBox2.Text}','{textBox3.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}','0')");
+                Connection.query($"insert into Mem (MNO,MPSWD,MNAME,MBIRTHDAY,MEMAIL,MTEL,MPOINT) values('{textBox1.Text}','{textBox3.Text}','{textBox2.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}','0')");
                 Close();
             }
             else
