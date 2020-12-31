@@ -23,9 +23,21 @@ namespace DBTA
         private string ramno;
         private string diskno;
         private string powerno;
+        private int cpuprice;
+        private int fanprice;
+        private int boardprice;
+        private int ramprice;
+        private int diskprice;
+        private int powerprice;
+        private int caseprice;
+        private int gpuprice;
+        private int ramnum;
+        private int PRICE = 0;
         public Form1()
         {
             InitializeComponent();
+            Count();
+            
 
         }
 
@@ -40,7 +52,7 @@ namespace DBTA
                 {
                     int right = label1.Right;
                     label1.Text = "欢迎您，" + lf.namestr;
-                    text= lf.namestr;
+                    text = lf.namestr;
                     label1.Left = right - label1.Width;
                     linkLabel1.Text = "退出登录";
                 }
@@ -59,12 +71,14 @@ namespace DBTA
         {
             GPU GPUSELECT = new GPU();
             GPUSELECT.ShowDialog();
-            if(GPUSELECT.GPUselect == true)
+            if (GPUSELECT.GPUselect == true)
             {
                 textBox9.Text = GPUSELECT.GPUname;
-                gpuno=GPUSELECT.GPUNO;
+                gpuno = GPUSELECT.GPUNO;
+                int.TryParse(GPUSELECT.GPUPRICE, out gpuprice);
             }
-            
+            Count();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,7 +89,9 @@ namespace DBTA
             {
                 textBox6.Text = CPUSELECT.CPUname;
                 cpuno = CPUSELECT.CPUNO;
+                int.TryParse(CPUSELECT.CPUPRICE, out cpuprice);
             }
+            Count();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -85,8 +101,10 @@ namespace DBTA
             if (FANSELECT.FANselect == true)
             {
                 textBox5.Text = FANSELECT.FANname;
-                fanno= FANSELECT.FANNO;
+                fanno = FANSELECT.FANNO;
+                int.TryParse(FANSELECT.FANPRICE, out fanprice);
             }
+            Count();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -96,19 +114,23 @@ namespace DBTA
             if (BOARDSELECT.BOARDselect == true)
             {
                 textBox2.Text = BOARDSELECT.BOARDname;
-                boardno= BOARDSELECT.BOARDNO;
+                boardno = BOARDSELECT.BOARDNO;
+                int.TryParse(BOARDSELECT.BOARDPRICE, out boardprice);
             }
+            Count();
         }
 
-        private void button4_Click(object sender, EventArgs e)  
+        private void button4_Click(object sender, EventArgs e)
         {
             RAM RAMSELECT = new RAM();
             RAMSELECT.ShowDialog();
             if (RAMSELECT.RAMselect == true)
             {
                 textBox3.Text = RAMSELECT.RAMname;
-                ramno= RAMSELECT.RAMNO;
+                ramno = RAMSELECT.RAMNO;
+                int.TryParse(RAMSELECT.RAMPRICE, out ramprice);
             }
+            Count();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -118,8 +140,10 @@ namespace DBTA
             if (DISKSELECT.DISKselect == true)
             {
                 textBox4.Text = DISKSELECT.DISKname;
-                diskno= DISKSELECT.DISKNO;
+                diskno = DISKSELECT.DISKNO;
+                int.TryParse(DISKSELECT.DISKPRICE, out diskprice);
             }
+            Count();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -129,8 +153,10 @@ namespace DBTA
             if (POWERSELECT.POWERselect == true)
             {
                 textBox10.Text = POWERSELECT.POWERname;
-                powerno= POWERSELECT.POWERNO;
+                powerno = POWERSELECT.POWERNO;
+                int.TryParse(POWERSELECT.POWERPRICE, out powerprice);
             }
+            Count();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -140,13 +166,15 @@ namespace DBTA
             if (CASESELECT.CASEselect == true)
             {
                 textBox11.Text = CASESELECT.CASEname;
-                caseno= CASESELECT.CASENO;
+                caseno = CASESELECT.CASENO;
+                int.TryParse(CASESELECT.CASEPRICE, out caseprice);
             }
+            Count();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if(islogin)
+            if (islogin)
             {
                 string a = text;
                 Connection.query($"insert into LIST_PC (LISTNO, LISTNAME, MNO, CPUNO, FANNO,BOARDNO,RAMNO,RAMNUM,DISKNO,GPUNO,POWERNO,CASENO) values('{Guid.NewGuid().ToString()}', '{textBox7.Text}', '{a}', '{cpuno}', '{fanno}', '{boardno}', '{ramno}',{textBox8.Text}, '{diskno}', '{gpuno}', '{powerno}', '{caseno}') ");
@@ -154,6 +182,63 @@ namespace DBTA
             }
             else MessageBox.Show("您不是会员，无法保存装机单！");
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+        private void Count()
+        {
+            if (textBox6.Text != "")
+            {
+                PRICE = PRICE + cpuprice;
+                
+            }
+            if (textBox9.Text != "")
+            {
+                PRICE = PRICE + gpuprice;
+            }
+            if (textBox5.Text != "")
+            {
+                PRICE = PRICE + fanprice;
+            }
+            if (textBox2.Text != "")
+            {
+                PRICE = PRICE + boardprice;
+            }
+            if (textBox3.Text != "")
+            {
+                if (textBox8.Text == "")
+                {
+                    PRICE = PRICE + ramprice;
+                }
+                else
+                {
+                    int.TryParse(textBox8.Text, out ramnum);
+                    PRICE = PRICE + ramnum * ramprice;
+                }
+
+            }
+            if (textBox4.Text != "")
+            {
+                PRICE = PRICE + diskprice;
+            }
+            if (textBox10.Text != "")
+            {
+                PRICE = PRICE + powerprice;
+            }
+            if (textBox11.Text != "")
+            {
+                PRICE = PRICE + caseprice;
+            }
+            textBox1.Text = Convert.ToString(PRICE);
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            Count();
         }
     }
 }

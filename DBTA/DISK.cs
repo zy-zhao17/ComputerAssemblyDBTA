@@ -15,6 +15,7 @@ namespace DBTA
     {
         public string DISKname;
         public string DISKNO;
+        public string DISKPRICE;
         public bool DISKselect = false;
         public DISK()
         {
@@ -94,6 +95,8 @@ namespace DBTA
                 DISKselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取DISK的名字
                 string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string price = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                DISKNO = price;
                 DISKname = id;
                 DISKNO = no;
                 Close();

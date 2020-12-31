@@ -16,6 +16,7 @@ namespace DBTA
     {
         public string GPUname;
         public string GPUNO;
+        public string GPUPRICE;
         public bool GPUselect = false;
 
         public GPU()
@@ -108,8 +109,10 @@ namespace DBTA
                 GPUselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取GPU的名字
                 string no=  dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string price = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
                 GPUname = id;
                 GPUNO = no;
+                GPUPRICE = price;
                 Close();
             }
             catch
