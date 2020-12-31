@@ -301,9 +301,9 @@ namespace DBTA
             this.label8.Location = new System.Drawing.Point(114, 261);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 20);
+            this.label8.Size = new System.Drawing.Size(39, 20);
             this.label8.TabIndex = 39;
-            this.label8.Text = "CASE";
+            this.label8.Text = "机箱";
             // 
             // label7
             // 
@@ -312,9 +312,9 @@ namespace DBTA
             this.label7.Location = new System.Drawing.Point(116, 236);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 20);
+            this.label7.Size = new System.Drawing.Size(39, 20);
             this.label7.TabIndex = 38;
-            this.label7.Text = "POWER";
+            this.label7.Text = "电源";
             // 
             // label6
             // 
@@ -323,9 +323,9 @@ namespace DBTA
             this.label6.Location = new System.Drawing.Point(117, 211);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 20);
+            this.label6.Size = new System.Drawing.Size(39, 20);
             this.label6.TabIndex = 37;
-            this.label6.Text = "GPU";
+            this.label6.Text = "显卡";
             // 
             // label5
             // 
@@ -334,9 +334,9 @@ namespace DBTA
             this.label5.Location = new System.Drawing.Point(117, 187);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 20);
+            this.label5.Size = new System.Drawing.Size(39, 20);
             this.label5.TabIndex = 36;
-            this.label5.Text = "DISK";
+            this.label5.Text = "硬盘";
             // 
             // label4
             // 
@@ -345,9 +345,9 @@ namespace DBTA
             this.label4.Location = new System.Drawing.Point(117, 162);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 20);
+            this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 35;
-            this.label4.Text = "RAM";
+            this.label4.Text = "内存";
             // 
             // label3
             // 
@@ -356,9 +356,9 @@ namespace DBTA
             this.label3.Location = new System.Drawing.Point(116, 137);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 34;
-            this.label3.Text = "BOARD";
+            this.label3.Text = "主板";
             // 
             // label12
             // 
@@ -367,9 +367,9 @@ namespace DBTA
             this.label12.Location = new System.Drawing.Point(116, 112);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 20);
+            this.label12.Size = new System.Drawing.Size(54, 20);
             this.label12.TabIndex = 33;
-            this.label12.Text = "FAN";
+            this.label12.Text = "散热器";
             // 
             // label13
             // 
