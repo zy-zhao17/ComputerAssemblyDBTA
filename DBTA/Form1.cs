@@ -209,6 +209,7 @@ namespace DBTA
                 string powerno = ab[9 + 13 * index];
                 string caseno = ab[10 + 13 * index];
                 int ramnum = int.Parse(ab[11 + 13 * index]);
+                string posttime = ab[12 + 13 * index];
 
                 int price = 0;
                 price += int.Parse(Connection.query($"select price from CPU_PC where cpuno='{cpuno}'")[0]);
@@ -222,14 +223,16 @@ namespace DBTA
 
                 string mname = Connection.query($"select MNAME from Mem where mno='{mno}'")[0];
 
+                int nthumb = int.Parse(Connection.query($"select count(*) from thumb where LISTNO='{listno}'")[0]);
+                int nfavo = int.Parse(Connection.query($"select count(*) from favourite where LISTNO='{listno}'")[0]);
 
 
                 dataGridView1.Rows[index].Cells[0].Value = listname;//名称
-                dataGridView1.Rows[index].Cells[1].Value = price.ToString();//总价格
+                dataGridView1.Rows[index].Cells[1].Value = price;//总价格
                 dataGridView1.Rows[index].Cells[2].Value = mname;//发布人
-                dataGridView1.Rows[index].Cells[3].Value = ab[3 + 13 * index];//发布时间
-                dataGridView1.Rows[index].Cells[4].Value = ab[4 + 13 * index];//点赞数
-                dataGridView1.Rows[index].Cells[5].Value = ab[5 + 13 * index];//收藏数
+                dataGridView1.Rows[index].Cells[3].Value = posttime;//发布时间
+                dataGridView1.Rows[index].Cells[4].Value = nthumb;//点赞数
+                dataGridView1.Rows[index].Cells[5].Value = nfavo;//收藏数
             }
         }
 
@@ -241,6 +244,12 @@ namespace DBTA
         }
         //查看论坛
         private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //查看收藏
+        private void button12_Click(object sender, EventArgs e)
         {
 
         }
@@ -308,6 +317,8 @@ namespace DBTA
         {
             Count();
         }
+
+
     }
 }
 
