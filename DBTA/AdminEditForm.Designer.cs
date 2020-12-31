@@ -55,6 +55,8 @@ namespace DBTA
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -171,7 +173,7 @@ namespace DBTA
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(109, 405);
+            this.button1.Location = new System.Drawing.Point(111, 437);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
@@ -181,7 +183,7 @@ namespace DBTA
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(239, 405);
+            this.button2.Location = new System.Drawing.Point(241, 437);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
@@ -269,11 +271,29 @@ namespace DBTA
             this.label12.TabIndex = 16;
             this.label12.Text = "label12";
             // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(119, 392);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(345, 21);
+            this.textBox13.TabIndex = 27;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(42, 398);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 12);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "label13";
+            // 
             // AdminEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 448);
+            this.ClientSize = new System.Drawing.Size(509, 472);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
@@ -335,5 +355,7 @@ namespace DBTA
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label13;
     }
 }

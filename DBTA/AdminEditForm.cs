@@ -14,8 +14,8 @@ namespace DBTA
     public partial class AdminEditForm : Form
     {
 
-        Label[] labels = new Label[12];
-        TextBox[] boxes = new TextBox[12];
+        Label[] labels = new Label[13];
+        TextBox[] boxes = new TextBox[13];
         int num;
         int priornum;
         string tablename;
@@ -48,6 +48,7 @@ namespace DBTA
             labels[9] = label10;
             labels[10] = label11;
             labels[11] = label12;
+            labels[12] = label13;
             boxes[0] = textBox1;
             boxes[1] = textBox2;
             boxes[2] = textBox3;
@@ -60,6 +61,7 @@ namespace DBTA
             boxes[9] = textBox10;
             boxes[10] = textBox11;
             boxes[11] = textBox12;
+            boxes[12] = textBox13;
             if (isupdate)
             {
                 for (int i = 0; i < priornum; i++)
@@ -81,7 +83,7 @@ namespace DBTA
                 }
 
             }
-            for(int i = num; i < 12; i++)
+            for(int i = num; i < 13; i++)
             {
                 labels[i].Visible = false;
                 labels[i].Enabled = false;
