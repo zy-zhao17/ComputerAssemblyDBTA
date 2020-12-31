@@ -15,6 +15,7 @@ namespace DBTA
     public partial class POWER : Form
     {
         public string POWERname;
+        public string POWERNO;
         public bool POWERselect = false;
         public POWER()
         {
@@ -69,7 +70,9 @@ namespace DBTA
             {
                 POWERselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取POWER的名字
+                string no= dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 POWERname = id;
+                POWERNO = no;
                 Close();
             }
             catch

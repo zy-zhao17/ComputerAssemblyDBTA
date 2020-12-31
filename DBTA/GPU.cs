@@ -15,6 +15,7 @@ namespace DBTA
     public partial class GPU : Form
     {
         public string GPUname;
+        public string GPUNO;
         public bool GPUselect = false;
 
         public GPU()
@@ -106,7 +107,9 @@ namespace DBTA
             {
                 GPUselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取GPU的名字
+                string no=  dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 GPUname = id;
+                GPUNO = no;
                 Close();
             }
             catch

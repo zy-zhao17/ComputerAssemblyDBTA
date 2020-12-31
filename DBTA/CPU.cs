@@ -15,6 +15,7 @@ namespace DBTA
     public partial class CPU : Form
     {
         public string CPUname;
+        public string CPUNO;
         public bool CPUselect = false;
         public CPU()
         {
@@ -111,6 +112,8 @@ namespace DBTA
             {
                 CPUselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取GPU的名字
+                string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                CPUNO = no;
                 CPUname = id;
                 Close();
             }
