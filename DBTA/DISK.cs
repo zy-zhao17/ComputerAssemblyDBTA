@@ -14,6 +14,7 @@ namespace DBTA
     public partial class DISK : Form
     {
         public string DISKname;
+        public string DISKNO;
         public bool DISKselect = false;
         public DISK()
         {
@@ -92,7 +93,9 @@ namespace DBTA
             {
                 DISKselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取DISK的名字
+                string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 DISKname = id;
+                DISKNO = no;
                 Close();
             }
             catch

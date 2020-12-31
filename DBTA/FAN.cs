@@ -13,6 +13,7 @@ namespace DBTA
     public partial class FAN : Form
     {
         public string FANname;
+        public string FANNO;
         public bool FANselect = false;
         public FAN()
         {
@@ -49,6 +50,8 @@ namespace DBTA
             {
                 FANselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取FAN的名字
+                string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                FANNO = no;
                 FANname = id;
                 Close();
             }

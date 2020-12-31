@@ -15,6 +15,7 @@ namespace DBTA
     public partial class RAM : Form
     {
         public string RAMname;
+        public string RAMNO;
         public bool RAMselect = false;
         public RAM()
         {
@@ -72,6 +73,8 @@ namespace DBTA
             {
                 RAMselect = true;
                 string id = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();//获取BOARD的名字
+                string no = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                RAMNO = no;
                 RAMname = id;
                 Close();
             }

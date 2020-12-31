@@ -15,6 +15,14 @@ namespace DBTA
     {
         private bool islogin = false;
         private string text;
+        private string caseno;
+        private string gpuno;
+        private string cpuno;
+        private string fanno;
+        private string boardno;
+        private string ramno;
+        private string diskno;
+        private string powerno;
         public Form1()
         {
             InitializeComponent();
@@ -54,6 +62,7 @@ namespace DBTA
             if(GPUSELECT.GPUselect == true)
             {
                 textBox9.Text = GPUSELECT.GPUname;
+                gpuno=GPUSELECT.GPUNO;
             }
             
         }
@@ -65,6 +74,7 @@ namespace DBTA
             if (CPUSELECT.CPUselect == true)
             {
                 textBox6.Text = CPUSELECT.CPUname;
+                cpuno = CPUSELECT.CPUNO;
             }
         }
 
@@ -75,6 +85,7 @@ namespace DBTA
             if (FANSELECT.FANselect == true)
             {
                 textBox5.Text = FANSELECT.FANname;
+                fanno= FANSELECT.FANNO;
             }
         }
 
@@ -85,6 +96,7 @@ namespace DBTA
             if (BOARDSELECT.BOARDselect == true)
             {
                 textBox2.Text = BOARDSELECT.BOARDname;
+                boardno= BOARDSELECT.BOARDNO;
             }
         }
 
@@ -95,6 +107,7 @@ namespace DBTA
             if (RAMSELECT.RAMselect == true)
             {
                 textBox3.Text = RAMSELECT.RAMname;
+                ramno= RAMSELECT.RAMNO;
             }
         }
 
@@ -105,6 +118,7 @@ namespace DBTA
             if (DISKSELECT.DISKselect == true)
             {
                 textBox4.Text = DISKSELECT.DISKname;
+                diskno= DISKSELECT.DISKNO;
             }
         }
 
@@ -115,6 +129,7 @@ namespace DBTA
             if (POWERSELECT.POWERselect == true)
             {
                 textBox10.Text = POWERSELECT.POWERname;
+                powerno= POWERSELECT.POWERNO;
             }
         }
 
@@ -125,6 +140,7 @@ namespace DBTA
             if (CASESELECT.CASEselect == true)
             {
                 textBox11.Text = CASESELECT.CASEname;
+                caseno= CASESELECT.CASENO;
             }
         }
 
@@ -133,7 +149,7 @@ namespace DBTA
             if(islogin)
             {
                 string a = text;
-                Connection.query($"insert into LIST_PC (LISTNO, LISTNAME, MNO, CPUNO, FANNO,BOARDNO,RAMNO,RAMNUM,DISKNO,GPUNO,POWERNO,CASENO) values('{Guid.NewGuid().ToString()}', '{textBox7.Text}', '{a}', '{textBox6.Text}', '{textBox5.Text}', '{textBox2.Text}', '{textBox3.Text}',{textBox8.Text}, '{textBox4.Text}', '{textBox9.Text}', '{textBox10.Text}', '{textBox11.Text}') ");
+                Connection.query($"insert into LIST_PC (LISTNO, LISTNAME, MNO, CPUNO, FANNO,BOARDNO,RAMNO,RAMNUM,DISKNO,GPUNO,POWERNO,CASENO) values('{Guid.NewGuid().ToString()}', '{textBox7.Text}', '{a}', '{cpuno}', '{fanno}', '{boardno}', '{ramno}',{textBox8.Text}, '{diskno}', '{gpuno}', '{powerno}', '{caseno}') ");
                 MessageBox.Show("保存装机单成功！");
             }
             else MessageBox.Show("您不是会员，无法保存装机单！");
