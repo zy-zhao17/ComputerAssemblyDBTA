@@ -176,9 +176,29 @@ namespace DBTA
         {
             if (islogin)
             {
-                string a = text;
-                Connection.query($"insert into LIST_PC (LISTNO, LISTNAME, MNO, CPUNO, FANNO,BOARDNO,RAMNO,RAMNUM,DISKNO,GPUNO,POWERNO,CASENO,POSTTIME) values('{Guid.NewGuid()}', '{textBox7.Text}', '{a}', '{cpuno}', '{fanno}', '{boardno}', '{ramno}',{textBox8.Text}, '{diskno}', '{gpuno}', '{powerno}', '{caseno}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}') ");
-                MessageBox.Show("保存装机单成功！");
+                if(textBox1.Text != "" && textBox8.Text != "" && textBox7.Text != "" && textBox9.Text!= ""&& textBox6.Text != ""&& textBox5.Text != ""&& textBox2.Text != ""&& textBox3.Text != ""&& textBox4.Text != ""&& textBox10.Text != ""&& textBox11.Text != "")
+                {
+                    string a = text;
+                    Connection.query($"insert into LIST_PC (LISTNO, LISTNAME, MNO, CPUNO, FANNO,BOARDNO,RAMNO,RAMNUM,DISKNO,GPUNO,POWERNO,CASENO,POSTTIME) values('{Guid.NewGuid()}', '{textBox7.Text}', '{a}', '{cpuno}', '{fanno}', '{boardno}', '{ramno}',{textBox8.Text}, '{diskno}', '{gpuno}', '{powerno}', '{caseno}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}') ");
+                    MessageBox.Show("保存装机单成功！");
+                    textBox9.Text = "";
+                    textBox6.Text = "";
+                    textBox5.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox10.Text = "";
+                    textBox11.Text = "";
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("请填满装机单！");
+                }
+                
+
             }
             else MessageBox.Show("您不是会员，无法保存装机单！");
 
