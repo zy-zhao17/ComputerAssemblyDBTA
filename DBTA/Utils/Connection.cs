@@ -62,7 +62,7 @@ namespace DBTA.Utils
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message+"\n"+ cmdTxt); }
             finally { CloseConn(conn); }
             return ans;
         } 

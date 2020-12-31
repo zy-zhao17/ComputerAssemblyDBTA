@@ -71,7 +71,7 @@ namespace DBTA
         {
             dataGridView1.Rows.Clear();
 
-            List<string> ab = Connection.query($"select * from DISK_PC WHERE DISKTYPE={textBox2.Text}");
+            List<string> ab = Connection.query($"select * from DISK_PC WHERE DISKTYPE='{textBox2.Text}'");
             int nrows = ab.Count / 7;
             for (int i = 0; i < nrows; i++)
             {

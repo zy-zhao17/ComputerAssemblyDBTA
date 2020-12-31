@@ -14,6 +14,7 @@ namespace DBTA
     public partial class LoginForm : Form
     {
         public string namestr;
+        public string nostr;
         public bool islogin = false;
 
         public LoginForm()
@@ -23,11 +24,12 @@ namespace DBTA
 
         private void button1_Click(object sender, EventArgs e)//登录
         {
-            List<string> ans = Connection.query($"select MNAME from Mem where MNO='{textBox1.Text}' and MPSWD='{textBox2.Text}'");
+            List<string> ans = Connection.query($"select MNO, MNAME from Mem where MNO='{textBox1.Text}' and MPSWD='{textBox2.Text}'");
             if (ans.Count>0)
             {
                 islogin = true;
-                namestr = ans[0];
+                nostr = ans[0];
+                namestr = ans[1];
                 Close();
             }
             else
