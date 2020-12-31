@@ -71,6 +71,8 @@ namespace DBTA
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -89,12 +91,12 @@ namespace DBTA
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.Location = new System.Drawing.Point(317, 311);
+            this.button9.Location = new System.Drawing.Point(510, 351);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(62, 29);
+            this.button9.Size = new System.Drawing.Size(110, 29);
             this.button9.TabIndex = 61;
-            this.button9.Text = "保存";
+            this.button9.Text = "上传到论坛！";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -191,6 +193,7 @@ namespace DBTA
             this.textBox11.Location = new System.Drawing.Point(265, 261);
             this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(228, 21);
             this.textBox11.TabIndex = 52;
             // 
@@ -199,6 +202,7 @@ namespace DBTA
             this.textBox10.Location = new System.Drawing.Point(265, 236);
             this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(228, 21);
             this.textBox10.TabIndex = 51;
             // 
@@ -207,6 +211,7 @@ namespace DBTA
             this.textBox9.Location = new System.Drawing.Point(265, 211);
             this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(228, 21);
             this.textBox9.TabIndex = 50;
             // 
@@ -223,6 +228,7 @@ namespace DBTA
             this.textBox6.Location = new System.Drawing.Point(265, 87);
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(228, 21);
             this.textBox6.TabIndex = 48;
             // 
@@ -231,6 +237,7 @@ namespace DBTA
             this.textBox5.Location = new System.Drawing.Point(265, 112);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(228, 21);
             this.textBox5.TabIndex = 47;
             // 
@@ -239,6 +246,7 @@ namespace DBTA
             this.textBox4.Location = new System.Drawing.Point(265, 187);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(228, 21);
             this.textBox4.TabIndex = 46;
             // 
@@ -247,6 +255,7 @@ namespace DBTA
             this.textBox3.Location = new System.Drawing.Point(265, 162);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(228, 21);
             this.textBox3.TabIndex = 45;
             // 
@@ -255,6 +264,7 @@ namespace DBTA
             this.textBox2.Location = new System.Drawing.Point(265, 137);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(228, 21);
             this.textBox2.TabIndex = 44;
             // 
@@ -399,6 +409,8 @@ namespace DBTA
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label2);
@@ -522,6 +534,26 @@ namespace DBTA
             this.Column5.ReadOnly = true;
             this.Column5.Width = 65;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(116, 329);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 20);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "总价";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(265, 329);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(228, 21);
+            this.textBox1.TabIndex = 64;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -586,6 +618,8 @@ namespace DBTA
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
