@@ -23,9 +23,16 @@ namespace DBTA
 
         private void button1_Click(object sender, EventArgs e)//登录
         {
-            islogin = true;
-            namestr = textBox1.Text;
-            Close();
+            if (Connection.query($"select MNO from Mem where MNO='{textBox1.Text}' and MPSWD='{textBox2.Text}'").Count > 0)
+            {
+                islogin = true;
+                namestr = textBox1.Text;
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("密码错误或用户名不存在！");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)//注册
