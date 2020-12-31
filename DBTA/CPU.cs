@@ -17,7 +17,10 @@ namespace DBTA
         public string CPUname;
         public string CPUNO;
         public string CPUPRICE;
+        public string CPUBOARD;
+        public bool recommendboard=false;
         public bool CPUselect = false;
+
         public CPU()
         {
             InitializeComponent();
@@ -124,6 +127,28 @@ namespace DBTA
             {
 
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+            
+            
+            try
+            {
+                recommendboard = true;
+                string cpuno = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();//获取CPU的no
+                CPUBOARD = cpuno;
+                CPUPAIR RECOMMEND = new CPUPAIR(CPUBOARD);
+                RECOMMEND.ShowDialog();
+
+
+            }
+            catch
+            {
+
+            }
+            
         }
     }
 }
