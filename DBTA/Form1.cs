@@ -187,28 +187,28 @@ namespace DBTA
 
 
         private void getListdata()
-        {   //0      1        2    3    4     5        6     7      8     9      10      11 
-            //LISTNO LISTNAME MNO CPUNO FANNO BOARDNO RAMNO DISKNO GPUNO POWERNO CASENO RAMNUM
+        {   //0      1        2    3    4     5        6     7      8     9      10      11    12
+            //LISTNO LISTNAME MNO CPUNO FANNO BOARDNO RAMNO DISKNO GPUNO POWERNO CASENO RAMNUM POSTTIME
             List<string> ab = Connection.query("select * from list_PC");
             dataGridView1.Rows.Clear();
 
-            int nrows = ab.Count / 12;
+            int nrows = ab.Count / 13;
             for (int i = 0; i < nrows; i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
                 int index = dataGridView1.Rows.Add(row);
-                string listno = ab[0 + 12 * index];
-                string listname = ab[1 + 12 * index];
-                string mno = ab[2 + 12 * index];
-                string cpuno = ab[3 + 12 * index];
-                string fanno = ab[4 + 12 * index];
-                string boardno = ab[5 + 12 * index];
-                string ramno = ab[6 + 12 * index];
-                string diskno = ab[7 + 12 * index];
-                string gpuno = ab[8 + 12 * index];
-                string powerno = ab[9 + 12 * index];
-                string caseno = ab[10 + 12 * index];
-                int ramnum = int.Parse(ab[11 + 12 * index]);
+                string listno = ab[0 + 13 * index];
+                string listname = ab[1 + 13 * index];
+                string mno = ab[2 + 13 * index];
+                string cpuno = ab[3 + 13 * index];
+                string fanno = ab[4 + 13 * index];
+                string boardno = ab[5 + 13 * index];
+                string ramno = ab[6 + 13 * index];
+                string diskno = ab[7 + 13 * index];
+                string gpuno = ab[8 + 13 * index];
+                string powerno = ab[9 + 13 * index];
+                string caseno = ab[10 + 13 * index];
+                int ramnum = int.Parse(ab[11 + 13 * index]);
 
                 int price = 0;
                 price += int.Parse(Connection.query($"select price from CPU_PC where cpuno='{cpuno}'")[0]);
@@ -227,9 +227,9 @@ namespace DBTA
                 dataGridView1.Rows[index].Cells[0].Value = listname;//名称
                 dataGridView1.Rows[index].Cells[1].Value = price.ToString();//总价格
                 dataGridView1.Rows[index].Cells[2].Value = mname;//发布人
-                dataGridView1.Rows[index].Cells[3].Value = ab[3 + 12 * index];//发布时间
-                dataGridView1.Rows[index].Cells[4].Value = ab[4 + 12 * index];//点赞数
-                dataGridView1.Rows[index].Cells[5].Value = ab[5 + 12 * index];//收藏数
+                dataGridView1.Rows[index].Cells[3].Value = ab[3 + 13 * index];//发布时间
+                dataGridView1.Rows[index].Cells[4].Value = ab[4 + 13 * index];//点赞数
+                dataGridView1.Rows[index].Cells[5].Value = ab[5 + 13 * index];//收藏数
             }
         }
 
