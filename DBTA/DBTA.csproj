@@ -169,6 +169,9 @@
     <EmbeddedResource Include="GPU.resx">
       <DependentUpon>GPU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListPCForm.resx">
+      <DependentUpon>ListPCForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

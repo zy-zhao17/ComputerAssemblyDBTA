@@ -285,6 +285,7 @@ namespace DBTA
                         dataGridView1.Rows[index].Cells[3].Value = posttime;//发布时间
                         dataGridView1.Rows[index].Cells[4].Value = nthumb;//点赞数
                         dataGridView1.Rows[index].Cells[5].Value = nfavo;//收藏数
+                        dataGridView1.Rows[index].Tag = listno;
                         Refresh();
                     }
                 }));
@@ -298,7 +299,7 @@ namespace DBTA
 
         private void showlist()
         {
-            
+            new ListPCForm(dataGridView1.SelectedRows[0].Tag.ToString(),islogin,text).ShowDialog();
         }
 
         //刷新论坛
