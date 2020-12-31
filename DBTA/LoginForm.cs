@@ -23,10 +23,11 @@ namespace DBTA
 
         private void button1_Click(object sender, EventArgs e)//登录
         {
-            if (Connection.query($"select MNO from Mem where MNO='{textBox1.Text}' and MPSWD='{textBox2.Text}'").Count > 0)
+            List<string> ans = Connection.query($"select MNAME from Mem where MNO='{textBox1.Text}' and MPSWD='{textBox2.Text}'");
+            if (ans.Count>0)
             {
                 islogin = true;
-                namestr = textBox1.Text;
+                namestr = ans[0];
                 Close();
             }
             else
