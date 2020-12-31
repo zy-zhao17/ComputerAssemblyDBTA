@@ -212,13 +212,13 @@ namespace DBTA
 
                 int price = 0;
                 price += int.Parse(Connection.query($"select price from CPU_PC where cpuno='{cpuno}'")[0]);
-                price += int.Parse(Connection.query($"select price from FAN where cpuno='{fanno}'")[0]);
-                price += int.Parse(Connection.query($"select price from BOARD where cpuno='{boardno}'")[0]);
-                price += int.Parse(Connection.query($"select price from RAM where cpuno='{ramno}'")[0]) * ramnum;
-                price += int.Parse(Connection.query($"select price from DISK_PC where cpuno='{diskno}'")[0]);
-                price += int.Parse(Connection.query($"select price from GPU where cpuno='{gpuno}'")[0]);
-                price += int.Parse(Connection.query($"select price from POWER_PC where cpuno='{powerno}'")[0]);
-                price += int.Parse(Connection.query($"select price from CASE_PC where cpuno='{caseno}'")[0]);
+                price += int.Parse(Connection.query($"select price from FAN where fanno='{fanno}'")[0]);
+                price += int.Parse(Connection.query($"select price from BOARD where boardno='{boardno}'")[0]);
+                price += int.Parse(Connection.query($"select price from RAM where ramno='{ramno}'")[0]) * ramnum;
+                price += int.Parse(Connection.query($"select price from DISK_PC where diskno='{diskno}'")[0]);
+                price += int.Parse(Connection.query($"select price from GPU where gpuno='{gpuno}'")[0]);
+                price += int.Parse(Connection.query($"select price from POWER_PC where powerno='{powerno}'")[0]);
+                price += int.Parse(Connection.query($"select price from CASE_PC where caseno='{caseno}'")[0]);
 
                 string mname = Connection.query($"select MNAME from Mem where mno='{mno}'")[0];
 
@@ -300,6 +300,11 @@ namespace DBTA
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            Count();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
             Count();
         }
