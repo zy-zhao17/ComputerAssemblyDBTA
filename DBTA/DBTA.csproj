@@ -147,12 +147,6 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="setupform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="setupform.Designer.cs">
-      <DependentUpon>setupform.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Connection.cs" />
     <EmbeddedResource Include="AdminEditForm.resx">
       <DependentUpon>AdminEditForm.cs</DependentUpon>
@@ -210,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="setupform.resx">
-      <DependentUpon>setupform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
